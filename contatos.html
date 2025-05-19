@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatos - Hotel Front</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       
+       body { 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        padding: 0;
+         background: #130e0e; }
+        
+         .cont { 
+            max-width: 600px; 
+            margin: 40px auto; 
+            background: rgb(216, 203, 203);
+             padding: 32px;
+              border-radius: 8px;
+               box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              }
+
+            h1 {
+                 color: #153c64;
+                 
+                 text-align: center;
+                 }
+        form { 
+            display: flex;
+             flex-direction: column;
+              gap: 16px;
+             }
+        label { 
+            font-weight: bold; 
+        }
+        input, textarea {
+             padding: 8px;
+              border: 1px solid #ccc;
+               border-radius: 4px;
+             }
+        button { 
+            background: #2980b9;
+             color: #fff; 
+             border: none; 
+             padding: 12px; 
+             border-radius: 4px; 
+             cursor: pointer; /* transition: background 0.3s; */ 
+             font-size: 16px;
+            }
+        button:hover { 
+            background: #3498db;
+         }
+        .info {
+             margin-top: 24px; color: #555; 
+            }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h1>Contato</h1>
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu Nome">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Uma Mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="info">
+            <p><strong>Telefone:</strong> (+244) 912 345 678</p>
+            <p><strong>E-mail:</strong> contato@hotelfront.com</p>
+            <p><strong>Endereço:</strong> Av. Exemplo, 123 - Centro, Luanda - Angola</p>
+        </div>
+    </div>
+</body>
+</html>
