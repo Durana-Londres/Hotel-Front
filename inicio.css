@@ -34,7 +34,7 @@ nav {
   justify-content: space-around;            /* Distribui os itens com espaço ao redor */
   align-items: center;                     
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; /* Define a fonte */
-  background: #272772;                     
+  background: #010102;                     
   height: 8vh;                             
 }
 
@@ -61,11 +61,14 @@ nav {
   transition: 0.3s;     /* Adiciona uma transição suave de 0.3 segundos em alterações */
 }
 
-    cursor: pointer;      /* Altera o cursor para uma mão ao passar por cima, indicando que é clicável */
-    }
+.cursor-pointer {      /* Classe utilitária para cursor de ponteiro */
+  cursor: pointer;
+}
+}
 
-    footer{
-    background-color: #272772;
-    color: white;
-    text-align: center;
-    }
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;;
+  padding: 12px 0;  
+}
