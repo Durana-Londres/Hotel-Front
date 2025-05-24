@@ -1,0 +1,15 @@
+.cards{
+       background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: 200px;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
+   
+}
+.quartos{
+    display: flex;
+}
