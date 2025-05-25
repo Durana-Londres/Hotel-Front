@@ -1,5 +1,5 @@
 body{
-    background-color:#ece9e9;;
+       background: #f4f4f4;
 }
 
 .quartos{
@@ -64,7 +64,6 @@ body{
  .cards:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     transform: translateY(-5px);
-    
   }
 .card{
     display: flex;
