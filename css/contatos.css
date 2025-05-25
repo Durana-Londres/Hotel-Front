@@ -2,12 +2,12 @@
         font-family: Arial, sans-serif; 
         margin: 0; 
         padding: 0;
-         background: #130e0e; }
+          background: #f4f4f4; }
         
          .cont { 
             max-width: 600px; 
             margin: 40px auto; 
-            background: rgb(216, 203, 203);
+           background-color: white;
              padding: 32px;
               border-radius: 8px;
                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@
                border-radius: 4px;
              }
         button { 
-            background: #2980b9;
+            background: green;
              color: #fff; 
              border: none; 
              padding: 12px; 
@@ -41,7 +41,7 @@
              font-size: 16px;
             }
         button:hover { 
-            background: #3498db;
+            background: #2bb63d;
          }
         .info {
              margin-top: 24px; color: #555; 

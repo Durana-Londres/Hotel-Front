@@ -42,6 +42,9 @@ h1{
     margin-left: 25px;
 
 }
+.bot:hover { 
+            background: #2bb63d;
+}
 a{
     text-decoration: none;
     color: white;
