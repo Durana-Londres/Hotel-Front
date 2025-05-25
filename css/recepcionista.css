@@ -1,0 +1,36 @@
+    body { 
+            font-family: Arial, sans-serif; 
+            background: #f5f5f5;
+             margin: 0;
+             }
+        header { 
+            background: #131414; 
+            color: #fff; 
+            padding: 1em; 
+            text-align: center; 
+        }
+        main { 
+            max-width: 600px; 
+            margin: 2em auto; 
+            background: #fff; 
+            padding: 2em; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            margin-top: 0; 
+        }
+        .btn { 
+            background: #2980b9; 
+            color: #fff; 
+            border: none; 
+            padding: 0.75em 1.5em; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        .btn:hover {
+            background: #3498db;
+        }
+        .section {
+            margin-bottom: 2em;
+        }

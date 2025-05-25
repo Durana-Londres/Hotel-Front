@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do administrador</title>
+    <link rel="stylesheet" href="../css/dashAdmin.css">
+    <link rel="icon" type="image/png" href="../imagens/logo.png">
+</head>
+<body >
+    
+    <div class="user">
+     <img src="../imagens/logo.png" width="60px" height="70px" alt="logo">
+       <a href="inicio.html" style="font-size: larger; margin-left: 85% ;margin-bottom: 100%" >Home</a>
+    </div>
+    <div id="fecharModal" onclick="fecharModal();">
+    <div id="meuModal" class="modal">
+        <div class="modal-content">
+            <h2><b>Utilizador</b></h2> <br>
+            <p> <b>Nome:</b> </p> <br>
+            <p> <b> E-mail:</b> </p> <br>
+            <p> <b>Nivel de acesso:</b> administrador </p> <br>
+            <button onclick="fecharModal();" class="bot">Fechar</button> <br><br> 
+        </div>
+    </div>
+       
+  
+
+
+    <div class="card">
+
+         <div class="cards">
+        <img src="../imagens/icon.funcionarios.png"  width="100px" height="100px" alt="icone-hospede">
+      <a href="ADM/funcionarios.html"><h4> Gestão de funcionários</h4></a>
+      </div>
+       
+           <div class="cards">
+        <img src="../imagens/icon.tarifas.png"  width="100px" height="100px" alt="">
+        <a href="ADM/tarifas.html"><h4>Gestão de tarifas</h4></a>
+   </div>
+
+      <div class="cards">
+        <img src="../imagens/icon.quarto.png" width="100px" height="100px" alt="icone-quarto">
+       <a href="ADM/quartos.html"><h4>Gestão de quartos</h4></a>
+      </div>
+        
+      <div class="cards"> 
+        <img src="../imagens/icon.reservas.png"  width="100px" height="100px" alt="icone-calendario">
+       <a href="ADM/reservas.html"><h4>Calendário/Gestão de reservas</h4></a>
+    </div>
+     
+      <div class="cards"> 
+        <img src="../imagens/icon.rel.png"  width="100px" height="100px" alt="icone-calendario">
+       <a href="ADM/relatorio.html"><h4>Relatórios e estátisticas</h4></a>
+    </div>
+
+      </div>
+      <script src="../JS/Admin.js"></script>
+</div> <br><br><br><br><br>
+ <button onclick="abrirModal();" class="bot" id="bot1">UTILIZADOR</button>
+</body >
+</html>

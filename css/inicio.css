@@ -1,0 +1,121 @@
+* {
+  margin: 0;             /* Remove a margem padrão de todos os elementos */
+  padding: 0;            /* Remove o preenchimento padrão de todos os elementos */
+}
+
+a {
+  color: #fff;           
+  text-decoration: none; 
+  transition: 0.3s;      /* Adiciona uma transição suave de 0.3 segundos para alterações */
+}
+
+.conta1 {
+  display: flex;
+  align-items: center;
+}
+.conta2 {
+  display: flex;
+  align-items: center;
+  
+}
+
+a:hover {
+  opacity: 0.7;          /* Reduz a opacidade para 70% quando o mouse passa sobre o link */
+}
+
+.logo {
+  font-size: 24px;           
+  text-transform: uppercase;
+  letter-spacing: 4px;       
+}
+
+nav {
+  display: flex;                             /* Exibe os itens de navegação em linha (horizontalmente) usando flexbox */
+  justify-content: space-around;            /* Distribui os itens com espaço ao redor */
+  align-items: center;                     
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; /* Define a fonte */
+  background: #010102;                     
+  height: 8vh;                             
+}
+
+
+.list {
+  list-style: none;   /* Remove os marcadores da lista (como bolinhas ou números) */
+  display: flex;      
+}
+
+.list li {
+  letter-spacing: 3px;  
+  margin-left: 32px;    
+
+.menu {
+  display: none;        /*Escon*/
+  cursor: pointer;      /* Altera o cursor para uma mão ao passar por cima, indicando que é clicável */
+}
+
+.menu div {
+  width: 32px;          
+  height: 2px;          
+  background: #fff;    
+  margin: 8px;          
+  transition: 0.3s;     /* Adiciona uma transição suave de 0.3 segundos em alterações */
+}
+
+.cursor-pointer {      /* Classe utilitária para cursor de ponteiro */
+  cursor: pointer;
+}
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;;
+  padding: 12px 0;  
+}
+
+
+@media (max-width: 768px) {
+  .list {
+    display: none;      /* Esconde a lista de navegação em telas menores */
+  }
+  
+  .menu {
+    display: block;     /* Exibe o menu hamburguer em telas menores */
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;   /* Reduz o tamanho da fonte do logo em telas muito pequenas */
+  }
+  
+  .list li {
+    margin-left: 16px; /* Reduz a margem entre os itens da lista em telas muito pequenas */
+  }
+  
+  .menu div {
+    width: 24px;       /* Reduz a largura das barras do menu hamburguer em telas muito pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    display: none;      /* Esconde a lista de navegação em telas menores */
+  }
+  
+  .menu {
+    display: block;     /* Exibe o menu hamburguer em telas menores */
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;   /* Reduz o tamanho da fonte do logo em telas muito pequenas */
+  }
+  
+  .list li {
+    margin-left: 16px; /* Reduz a margem entre os itens da lista em telas muito pequenas */
+  }
+  
+  .menu div {
+    width: 24px;       /* Reduz a largura das barras do menu hamburguer em telas muito pequenas */
+  }
+}
