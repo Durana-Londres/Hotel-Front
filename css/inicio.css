@@ -72,6 +72,8 @@ footer {
   text-align: center;;
   padding: 12px 0;  
 }
+<<<<<<< HEAD
+=======
 
 
 @media (max-width: 768px) {
@@ -119,3 +121,4 @@ footer {
     width: 24px;       /* Reduz a largura das barras do menu hamburguer em telas muito pequenas */
   }
 }
+>>>>>>> d4340f0d870c05ae141ca3d704ad49647a6ec1f6
