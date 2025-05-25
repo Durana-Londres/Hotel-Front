@@ -86,4 +86,66 @@ a{
     text-decoration: none;
 }
 
- 
+
+/*Responsividade*/
+ @media (max-width: 480px) {
+   .card{
+       display: flex;
+      flex-direction: column;
+   }
+   .logo{
+      display: none;
+   }
+ .user a{
+   margin-left: 30px;
+   margin-top: 25px;
+   font-size:25px;
+ }
+ .user #bot1{
+     margin-top: 25px;
+   margin-left: 70px;
+ }
+  }
+
+@media (max-width: 768px) {
+    .card{
+       display: flex;
+      flex-direction: column;
+   }
+     .logo{
+      display: none;
+   }
+.user a{
+   margin-left: 30px;
+   margin-top: 25px;
+   font-size:25px;
+ }
+ .user #bot1{
+     margin-top: 25px;
+   margin-left: 70px;
+ }
+  
+ }
+
+@media (max-width: 992px) { 
+    .cards{
+       display: flex;
+      flex-direction: column;
+      
+   }
+     .logo{
+      display: none;
+   }
+    .user a{
+   margin-left: 30px;
+   margin-top: 25px;
+   font-size:25px;
+ }
+ .user #bot1{
+     margin-top: 25px;
+   margin-left: 70px;
+ }
+  
+}
+
+
