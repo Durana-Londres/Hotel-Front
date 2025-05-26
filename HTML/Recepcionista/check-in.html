@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagens/logo.ico" type="image/x-icon">
+    <title>Check-In - Recepcionista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recepcionista/check-in.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Check-In de Huésped</h2>
+        <form>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="documento">Documento de identidad</label>
+            <input type="text" id="documento" name="documento" required>
+
+            <label for="habitacion">Número de habitación</label>
+            <input type="number" id="habitacion" name="habitacion" min="1" required>
+
+            <label for="fecha">Fecha de ingreso</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <button type="submit">Registrar Check-In</button>
+        </form>
+        <button onclick="window.location.href='/HTML/recepcionista.html'">Voltar ao Recepcionista</button>
+    </div>
+</body>
+</html>

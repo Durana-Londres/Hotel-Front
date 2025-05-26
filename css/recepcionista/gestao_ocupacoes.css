@@ -1,0 +1,105 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background: #f7f7f7;
+}
+
+/* Título */
+h1 {
+  color: #2c3e50;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #2980b9;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* Botões */
+.btn {
+  padding: 8px 16px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #219150;
+}
+
+/* Ações */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  body {
+    margin: 20px 10px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  td {
+    padding: 10px;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

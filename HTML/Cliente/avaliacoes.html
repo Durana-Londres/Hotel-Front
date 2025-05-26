@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliações de Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dashcliente.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Avaliações de Clientes</h1>
+
+        <!-- Formulário de Avaliação -->
+        <div class="review-form">
+            <h2>Deixe sua Avaliação</h2>
+            <form id="avaliacaoForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="nota">Nota:</label>
+                <select id="nota" name="nota" required>
+                    <option value="">Selecione</option>
+                    <option value="5">5 - Excelente</option>
+                    <option value="4">4 - Muito Bom</option>
+                    <option value="3">3 - Bom</option>
+                    <option value="2">2 - Regular</option>
+                    <option value="1">1 - Ruim</option>
+                </select>
+
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </div>
+
+        <!-- Lista de Avaliações -->
+        <div class="reviews-list">
+            <h2>Avaliações Recentes</h2>
+            <div id="listaAvaliacoes"></div>
+        </div>
+    </div>
+
+    <!-- Script de Armazenamento e Renderização -->
+    <script>
+        const form = document.getElementById('avaliacaoForm');
+        const lista = document.getElementById('listaAvaliacoes');
+
+        function renderAvaliacoes() {
+            const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes') || '[]');
+            lista.innerHTML = '';
+
+            if (avaliacoes.length === 0) {
+                lista.innerHTML = '<p>Seja o primeiro a avaliar!</p>';
+                return;
+            }
+
+            avaliacoes.reverse().forEach(avaliacao => {
+                const div = document.createElement('div');
+                div.className = 'review';
+                div.innerHTML = `
+                    <strong>${avaliacao.nome}</strong> - Nota: ${avaliacao.nota}<br>
+                    <span>${avaliacao.comentario}</span>
+                `;
+                lista.appendChild(div);
+            });
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = form.nome.value.trim();
+            const nota = form.nota.value;
+            const comentario = form.comentario.value.trim();
+
+            if (!nome || !nota || !comentario) return;
+
+            const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes') || '[]');
+            avaliacoes.push({ nome, nota, comentario });
+            localStorage.setItem('avaliacoes', JSON.stringify(avaliacoes));
+
+            form.reset();
+            renderAvaliacoes();
+        });
+
+        renderAvaliacoes();
+    </script>
+</body>
+</html>

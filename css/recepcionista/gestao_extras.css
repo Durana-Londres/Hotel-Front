@@ -1,0 +1,114 @@
+/* Estilo base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background: #f7f7f7;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background: #eaeaea;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* Formulário */
+form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  body {
+    margin: 20px 10px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  td {
+    padding: 10px;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+}

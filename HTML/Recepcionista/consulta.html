@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagens/logo.ico" type="image/x-icon">
+    <title>Consulta de Reservas - Recepcionista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recepcionista/consulta.css">
+</head>
+<body>
+    <h1>Consulta de Reservas</h1>
+    <!-- Botão para voltar à página principal do recepcionista -->
+    <button onclick="window.location.href='/HTML/recepcionista.html'">Voltar ao Recepcionista</button>
+
+    <form id="consultaForm">
+        <label for="nombre">Nombre del huésped</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre">
+
+        <label for="fecha">Fecha de reserva</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <table id="resultados">
+        <thead>
+            <tr>
+                <th>Reserva ID</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Habitación</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Resultados de la consulta aparecerán aquí -->
+        </tbody>
+    </table>
+
+    <script>
+        // Adiciona um ouvinte de evento ao formulário para interceptar o envio padrão
+        document.getElementById('consultaForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o recarregamento da página
+
+            // Seleciona o corpo da tabela onde os resultados serão exibidos
+            const tbody = document.querySelector('#resultados tbody');
+
+            // Insere uma linha de resultado simulada na tabela
+            tbody.innerHTML = `
+                <tr>
+                    <td>12345</td>
+                    <td>Juan Pérez</td>
+                    <td>2024-06-10</td>
+                    <td>201</td>
+                    <td>Confirmada</td>
+                </tr>
+            `;
+        });
+    </script>
+</body>
+</html>

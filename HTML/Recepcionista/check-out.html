@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagens/logo.ico" type="image/x-icon">
+    <title>Check-Out - Recepcionista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recepcionista/check-out.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check-Out</h1>
+        <form>
+            <label for="room">Número de Habitación</label>
+            <input type="text" id="room" name="room" required>
+
+            <label for="guest">Nombre del Huésped</label>
+            <input type="text" id="guest" name="guest" required>
+
+            <label for="checkout-date">Fecha de Check-Out</label>
+            <input type="date" id="checkout-date" name="checkout-date" required>
+
+            <label for="payment">Método de Pago</label>
+            <select id="payment" name="payment" required>
+                <option value="">Seleccione</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="transferencia">Transferencia</option>
+            </select>
+
+            <button type="submit">Finalizar Check-Out</button>
+        </form>
+        <button onclick="window.location.href='/HTML/recepcionista.html'">Voltar ao Recepcionista</button>
+    </div>
+</body>
+</html>
