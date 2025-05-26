@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Avaliações de Clientes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/dashcliente.css">
+  <link rel="stylesheet" href="/css/cliente/avaliacoes.css">
 </head>
 <body>
 
@@ -32,59 +32,86 @@
                 <textarea id="comentario" name="comentario" rows="4" required></textarea>
 
                 <button type="submit">Enviar Avaliação</button>
+
+                <button type="button" id="btn-voltar"><a href="/HTML/cliente.html">Voltar</a></button>
             </form>
-        </div>
 
         <!-- Lista de Avaliações -->
-        <div class="reviews-list">
-            <h2>Avaliações Recentes</h2>
+        <div class="avali">
+            <h2>Avaliações Enviadas</h2>
             <div id="listaAvaliacoes"></div>
         </div>
     </div>
 
-    <!-- Script de Armazenamento e Renderização -->
-    <script>
-        const form = document.getElementById('avaliacaoForm');
-        const lista = document.getElementById('listaAvaliacoes');
+   <!-- Script de Armazenamento e Renderização 
+<script>
+    // Obtém o formulário e o elemento da lista de avaliações do HTML
+    const form = document.getElementById('avaliacaoForm');
+    const lista = document.getElementById('listaAvaliacoes');
 
-        function renderAvaliacoes() {
-            const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes') || '[]');
-            lista.innerHTML = '';
+    // Função para renderizar as avaliações salvas no localStorage
+    function renderAvaliacoes() {
+        // Lê as avaliações do localStorage e converte de JSON para array
+        const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes') || '[]');
+        
+        // Limpa a lista de avaliações que está na página
+        lista.innerHTML = '';
 
-            if (avaliacoes.length === 0) {
-                lista.innerHTML = '<p>Seja o primeiro a avaliar!</p>';
-                return;
-            }
-
-            avaliacoes.reverse().forEach(avaliacao => {
-                const div = document.createElement('div');
-                div.className = 'review';
-                div.innerHTML = `
-                    <strong>${avaliacao.nome}</strong> - Nota: ${avaliacao.nota}<br>
-                    <span>${avaliacao.comentario}</span>
-                `;
-                lista.appendChild(div);
-            });
+        // Se não houver avaliações, mostra uma mensagem padrão
+        if (avaliacoes.length === 0) {
+            lista.innerHTML = '<p>Seja o primeiro a avaliar!</p>';
+            return;
         }
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Inverte a ordem das avaliações (para mostrar as mais recentes primeiro)
+        avaliacoes.reverse().forEach(avaliacao => {
+            // Cria um novo elemento <div> para cada avaliação
+            const div = document.createElement('div');
+            div.className = 'review'; // Adiciona a classe 'review' para estilização
 
-            const nome = form.nome.value.trim();
-            const nota = form.nota.value;
-            const comentario = form.comentario.value.trim();
+            // Define o conteúdo HTML da avaliação (nome, nota, comentário)
+            div.innerHTML = `
+                <strong>${avaliacao.nome}</strong> - Nota: ${avaliacao.nota}<br>
+                <span>${avaliacao.comentario}</span>
+            `;
 
-            if (!nome || !nota || !comentario) return;
-
-            const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes') || '[]');
-            avaliacoes.push({ nome, nota, comentario });
-            localStorage.setItem('avaliacoes', JSON.stringify(avaliacoes));
-
-            form.reset();
-            renderAvaliacoes();
+            // Adiciona o div com a avaliação na lista
+            lista.appendChild(div);
         });
+    }
 
+    // Adiciona um ouvinte de evento para o envio do formulário
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio tradicional (recarregar a página)
+
+        // Pega os valores dos campos do formulário e remove espaços em branco
+        const nome = form.nome.value.trim();
+        const nota = form.nota.value;
+        const comentario = form.comentario.value.trim();
+
+        // Verifica se todos os campos estão preenchidos
+        if (!nome || !nota || !comentario) return;
+
+        // Recupera as avaliações do localStorage ou cria um array vazio
+        const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes') || '[]');
+
+        // Adiciona a nova avaliação no array
+        avaliacoes.push({ nome, nota, comentario });
+
+        // Salva o array atualizado no localStorage como uma string JSON
+        localStorage.setItem('avaliacoes', JSON.stringify());
+
+        // Limpa os campos do formulário
+        form.reset();
+
+        // Atualiza a lista de avaliações exibida na página
         renderAvaliacoes();
-    </script>
+    });
+
+    // Executa a renderização inicial das avaliações ao carregar a página
+    renderAvaliacoes();
+</script>-->
+    
+   
 </body>
 </html>

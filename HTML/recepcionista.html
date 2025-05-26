@@ -9,10 +9,14 @@
 </head>
 <body >
     
-    <div class="user">
-     <img src="../imagens/logo.png" width="60px" height="70px" alt="logo">
-       <a href="inicio.html" style="font-size: larger; margin-left: 85% ;margin-bottom: 100%" >Home</a>
-    </div>
+    <header class="header">
+      <div class="user">
+        <img src="../imagens/logo.png" width="60" height="70" alt="logo" class="logo">
+        <a href="inicio.html" class="home-link">Home</a>
+        <button onclick="abrirModal();" class="bot user-btn" id="bot1">Utilizador</button>
+      </div>
+    </header>
+    
     <div id="fecharModal" onclick="fecharModal();">
     <div id="meuModal" class="modal">
         <div class="modal-content">
@@ -29,39 +33,51 @@
 
     <div class="card">
 
+      <a href="Recepcionista/check-out.html">
          <div class="cards">
         <img src="../imagens/rece_1.png"  width="100px" height="100px" alt="icone-hospede">
-      <a href="Recepcionista/check-out.html"><h4>Check-out</h4></a>
+      <h4>Check-out</h4>
       </div>
-       
+
+        <a href="Recepcionista/check-in.html">
            <div class="cards">
         <img src="../imagens/rece_2.png"  width="100px" height="100px" alt="">
-        <a href="Recepcionista/check-in.html"><h4>Check-in</h4></a>
-   </div>
+       <h4>Check-in</h4>
+         </div>
+      </a>
    
+       <a href="Recepcionista/cadastro.html">
       <div class="cards">
         <img src="../imagens/rece_3.png" width="100px" height="100px" alt="icone-quarto">
-       <a href="Recepcionista/cadastro.html"><h4>Cadastro manual de reservas</h4></a>
+     <h4>Cadastro manual de reservas</h4>
       </div>
+        </a>
+          
+        <a href="Recepcionista/gestao_extras.html">
         
       <div class="cards"> 
         <img src="../imagens/rece_4.png"  width="100px" height="100px" alt="icone-calendario">
-       <a href="Recepcionista/consulta.html"><h4>Consulta de hospedes</h4></a>
+       <h4>Consulta de hospedes</h4>
     </div>
+        </a>
      
+        <a href="Recepcionista/gestao_extras.html">
       <div class="cards"> 
         <img src="../imagens/rece_5.png"  width="100px" height="100px" alt="icone-calendario">
-       <a href="Recepcionista/gestao_extras.html"><h4>Gestão de ocupacões extras</h4></a>
+       <h4>Gestão de ocupacões extras</h4>
     </div>
+        </a>
 
+        <a href="Recepcionista/gestao_ocupacoes.html">
        <div class="cards"> 
         <img src="../imagens/rece_6.png"  width="100px" height="100px" alt="icone-calendario">
-       <a href="Recepcionista/gestao_ocupacoes.html"><h4>Gestão de ocupacões </h4></a>
+       <h4>Gestão de ocupacões</h4>
     </div>
+        </a>
 
+      
       </div>
       <script src="../JS/recepcionista.js"></script>
-</div> <br><br><br><br><br>
- <button onclick="abrirModal();" class="bot" id="bot1">UTILIZADOR</button>
+
 </body >
 </html>

@@ -193,6 +193,17 @@ textarea {
   outline: none;
 }
 
+#btn-voltar {
+  text-align: center;
+  margin-top: 15px;
+  
+  a {
+    text-decoration: none;
+    color: #f4f7fa;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
 #perfilForm button {
   margin-top: 10px;
   padding: 10px;

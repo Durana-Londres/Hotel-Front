@@ -9,10 +9,15 @@
 </head>
 <body >
     
-    <div class="user">
-     <img src="../imagens/logo.png" width="60px" height="70px" alt="logo">
-       <a href="inicio.html" style="font-size: larger; margin-left: 85% ;margin-bottom: 100%" >Home</a>
-    </div>
+   <header class="header">
+      <div class="user">
+        <img src="../imagens/logo.png" width="60" height="70" alt="logo" class="logo">
+        <a href="inicio.html" class="home-link">Home</a>
+        <button onclick="abrirModal();" class="bot user-btn" id="bot1">Utilizador</button>
+      </div>
+    </header>
+    
+
     <div id="fecharModal" onclick="fecharModal();">
     <div id="meuModal" class="modal">
         <div class="modal-content">
@@ -29,39 +34,50 @@
 
     <div class="card">
 
+      <a href="Cliente/verquartos.html">
          <div class="cards">
         <img src="../imagens/cliente_1.png"  width="100px" height="100px" alt="icone-hospede">
-      <a href="Cliente/verquartos.html"><h4> Minhas reservas</h4></a>
+      <h4> Minhas reservas</h4>
       </div>
-       
+       </a>
+        <a href="Cliente/reservar.html">
            <div class="cards">
         <img src="../imagens/cliente_2.png"  width="100px" height="100px" alt="">
-        <a href="Cliente/reservar.html"><h4>Fazer novas reservas</h4></a>
+        <h4>Fazer novas reservas</h4>
    </div>
-   
+   </a>
+
+      <a href="Cliente/pagamento.html">
       <div class="cards">
         <img src="../imagens/cliente_3.png" width="100px" height="100px" alt="icone-quarto">
-       <a href="Cliente/pagamento.html"><h4>Pagamentos Online</h4></a>
+       <h4>Pagamentos Online</h4>
       </div>
+      </a>
         
+      <a href="Cliente/perfil.html">
 <div class="cards"> 
         <img src="../imagens/cliente_6.png" width="100px" height="100px" alt="icone-calendario">
-       <a href="Cliente/perfil.html"><h4>Perfil do Cliente</h4></a>
+       <h4>Perfil do Cliente</h4>
     </div>
+      </a>
 
+
+          <a href="Cliente/servicos.html">
       <div class="cards"> 
         <img src="../imagens/cliente_4.png"  width="100px" height="100px" alt="icone-calendario">
-       <a href="Cliente/servicos.html"><h4>Solicitar serviços adicionais</h4></a>
+       <h4>Solicitar serviços adicionais</h4>
     </div>
+      </a>
 
+        <a href="Cliente/avaliacoes.html">
       <div class="cards"> 
         <img src="../imagens/cliente_5.png"  width="100px" height="100px" alt="icone-calendario">
-       <a href="Cliente/avaliacoes.html"><h4>Avaliações e Feedback</h4></a>
+       <h4>Avaliações e Feedback</h4>
     </div>
+      </a>
 
       </div>
       <script src="../JS/cliente.js"></script>
-</div> <br><br><br><br><br>
- <button onclick="abrirModal();" class="bot" id="bot1">UTILIZADOR</button>
+
 </body >
 </html>

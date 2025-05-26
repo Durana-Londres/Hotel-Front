@@ -36,7 +36,7 @@ tr:nth-child(even) {
 /* Botões */
 .btn {
   padding: 8px 16px;
-  background: #27ae60;
+    background: #005fa3;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -46,7 +46,7 @@ tr:nth-child(even) {
 }
 
 .btn:hover {
-  background: #219150;
+   background: #005fa3;
 }
 
 /* Ações */
