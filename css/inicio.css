@@ -12,6 +12,7 @@ a {
 .conta1 {
   display: flex;
   align-items: center;
+
 }
 .conta2 {
   display: flex;
@@ -35,7 +36,8 @@ nav {
   align-items: center;                     
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; /* Define a fonte */
   background: #010102;                     
-  height: 8vh;                             
+  height: 8vh;     
+                          
 }
 
 
@@ -46,7 +48,7 @@ nav {
 
 .list li {
   letter-spacing: 3px;  
-  margin-left: 32px;    
+  margin-left:75px;    
 
 .menu {
   display: none;        /*Escon*/
