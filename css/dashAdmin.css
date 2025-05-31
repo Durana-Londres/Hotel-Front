@@ -73,7 +73,8 @@ body{
     width: 200px;
     text-align: center;
     margin-top: 50px;
-    margin-right: 50px;
+    margin-right: 20px;
+   
  }
  .cards:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -81,7 +82,7 @@ body{
   }
 .card{
     display: flex;
-    margin-left: 80px;
+    margin-left: 20px;
 }
 a{
     text-decoration: none;
